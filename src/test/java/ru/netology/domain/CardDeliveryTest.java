@@ -15,7 +15,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class CardDeliveryTest {
     @Test   // №1
     public void shouldSuccessfulFormSubmission() {
-        open("http://localhost:9515");
+        open("http://localhost:9999");
         $("[data-test-id=city] input").setValue("Анадырь");
         $("[data-test-id=date] input").doubleClick().sendKeys(Keys.DELETE);
         String verificationDate = LocalDate.now() .plusDays(3)         //Текущая дата плюс 3 дня
@@ -31,7 +31,7 @@ public class CardDeliveryTest {
     }
     @Test   //№2
     public void shouldSuccessfulFormSubmissionAfterInteractingWithComplexElements() {
-        open("http://localhost:9515");
+        open("http://localhost:9999");
         $("[data-test-id=city] input").setValue("Ан");
         $(Selectors.byText("Анадырь")).click();
         $("[data-test-id=date] input").click();
